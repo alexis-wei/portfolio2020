@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer style={{paddingBottom: "200px"}}>
 
         </footer>
       </div>

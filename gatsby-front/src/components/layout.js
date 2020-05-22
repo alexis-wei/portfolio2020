@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built by Alexis Wei
+
         </footer>
       </div>
     </>

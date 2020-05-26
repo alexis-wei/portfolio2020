@@ -614,7 +614,6 @@ pre tt:after {
   }
 }
 
-
 .center{
   text-align: center;
   display: block;
@@ -622,6 +621,30 @@ pre tt:after {
   align-items: center;
   margin: auto;
   width: 100%;
+}
+
+#cloud-r {
+  animation-name: cloud-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;  
+  animation-timing-function: ease-out;
+}
+
+#cloud-l {
+  animation-name: cloud-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;  
+  animation-timing-function: ease-out;
+}
+
+@keyframes cloud-right {
+  0%   {left:0px}
+  100% {left:32vw}
+}
+
+@keyframes cloud-left {
+  0%   {right:5px}
+  100% {right:40vw}
 }
 
 .extra-light{

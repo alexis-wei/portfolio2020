@@ -24,12 +24,22 @@ class IndexPage extends React.Component {
           <Grid item xs={0} sm={2}/>
           <Grid item xs={12} sm={8}>
 
-            <div style={{paddingTop: "140px", paddingBottom: "500px", position: "relative", justifyContent: "center",alignItems: "center"}}>
+            <div style={{paddingTop: "16vh", paddingBottom: "6vh", position: "relative", justifyContent: "center",alignItems: "center"}}>
               <img src={this.state.img} onMouseOver={() => {this.setState({img: Wave2})}} onMouseOut={() => {this.setState({img: Wave1})}} 
               onFocus={ () => void 0 } onBlur={ () => void 0 } alt="Alexis Waving" className="center" style={{width: "500px", margin: "auto"}}/>
               <img src={Cloud1} id="cloud-l" alt="Pink Cloud 1" style={{height: "200px", paddingRight: "200px", top:"100px", position:"absolute" }}/>
               <img src={Cloud2} id="cloud-r" alt="Pink Cloud 2" style={{height: "400px", paddingLeft: "200px", top:"280px", position:"absolute" }}/>
             </div>
+            <Grid container spacing={3}>
+              <Grid item xs={1}/>
+              <Grid item xs={10} sm={7}>
+                <h4 className="medium" style={{lineHeight: "24px"}}> I am current a third year <b>mechanical engineering</b> and <b> eecs</b> student at UC Berkeley.
+                I love bringing parts and machines to life through connectors and code. On the side, I also dabble a little bit in illustration and photography.
+                I am big dreamer and hope to always make products that everyone will love. <br/><br/> Let's explore a little bit of what I've done!</h4>
+              </Grid>
+              <Grid item xs={1} sm={4}/>
+            </Grid>
+            
           </Grid>
           <Grid item xs={0} sm={2}/>
         </Grid>

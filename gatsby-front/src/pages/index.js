@@ -1,6 +1,7 @@
 import React from "react"
 import LinkIcon from '@material-ui/icons/Link';
 import Layout from "../components/layout"
+import Projects from "../components/projects"
 import SEO from "../components/seo"
 import IconButton from '@material-ui/core/IconButton';
 import Wave1 from "../images/wave1.svg"
@@ -44,16 +45,16 @@ class IndexPage extends React.Component {
               </Grid>
               <Grid item xs={1} sm={4}/>
             </Grid>
-            <h1>PROJECTS</h1>
+            <Projects/>
             
           </Grid>
           <Grid item xs={1} sm={2}>
           <Grid container direction="row" justify="flex-end" >
 
               
-              <Grid item xs={8} />
+              <Grid item xs={0} sm={4} md={8}/>
 
-              <Grid item xs={2}>
+              <Grid item xs={10} sm={6} md={2}>
                 <IconButton id="main-color" aria-label="link" component="span" onClick={() => window.open(resume)}>
                 <LinkIcon />
               </IconButton></Grid>

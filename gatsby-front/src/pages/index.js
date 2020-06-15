@@ -1,9 +1,45 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { withStyles } from '@material-ui/styles';
 
 import Button from '@material-ui/core/Button';
 
+
+const styles = theme => ({
+  root: {
+    borderRadius: 10,
+    margin: 10, 
+    width: 120,
+    borderColor: '#707070',
+    color: '#707070',
+    fontSize: '0.8rem'
+  },
+  label: {
+    textTransform: 'capitalize',
+  },
+  pinkButton: {
+    '&:hover': {
+      borderColor: '#A26C6C',
+      color: '#A26C6C',
+      backgroundColor: '#FFF4F8'
+    }
+  },
+  blueButton: {
+    '&:hover': {
+      borderColor: '#547398',
+      color: '#547398',
+      backgroundColor: '#E3F4FF'
+    }
+  },
+  yellowButton: {
+    '&:hover': {
+      borderColor: '#D1A922',
+      color: '#D1A922',
+      backgroundColor: '#FFFCE8'
+    }
+  }
+});
 
 
 class IndexPage extends React.Component {
@@ -14,6 +50,7 @@ class IndexPage extends React.Component {
 
 
   render() {
+    const { classes } = this.props;
     return(
       <Layout >
         <SEO title="Alexis Wei" />
@@ -23,9 +60,9 @@ class IndexPage extends React.Component {
           <h6 className="light">Robotics Engineer and Designer</h6>
         </div>
         <div>
-          <Button variant="outlined" color="primary"  style={{ borderRadius: 8, margin: 10 }}>Mechanical</Button>
-          <Button variant="outlined" color="primary"  style={{ borderRadius: 8, margin: 10 }}>Software</Button>
-          <Button variant="outlined" color="primary"  style={{ borderRadius: 8, margin: 10 }}>Design</Button>
+          <Button className={classes.pinkButton } variant="outlined" classes={{root: classes.root, label: classes.label }} color="primary" size="small" >Mechanical</Button>
+          <Button className={classes.blueButton } classes={{root: classes.root, label: classes.label }} variant="outlined" color="primary" size="small" >Software</Button>
+          <Button className={classes.yellowButton }classes={{root: classes.root, label: classes.label }} variant="outlined" color="primary" size="small" >Design</Button>
         </div>
         </div>
 
@@ -38,4 +75,6 @@ class IndexPage extends React.Component {
   
 }
 
-export default IndexPage
+
+
+export default withStyles(styles)(IndexPage)

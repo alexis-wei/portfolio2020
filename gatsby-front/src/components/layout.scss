@@ -642,10 +642,12 @@ pre tt:after {
 
 .center{
   text-align: center;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: auto;
+  padding-bottom: 10%;
   width: 100%;
   height: 100%;
 }

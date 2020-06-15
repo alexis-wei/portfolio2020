@@ -258,7 +258,7 @@ h1 {
   font-family: $title;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h2 {
@@ -319,7 +319,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Inconsolata', monospace;
+  font-family: $title;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -336,9 +336,9 @@ h6 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: $body-text;
-  font-weight: bold;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 hgroup {
@@ -710,4 +710,9 @@ pre tt:after {
 
 #main-color{
   color: $dark-grey;
+}
+
+.header-title {
+  font-weight: 400;
+  font-size: 22px;
 }

@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/styles';
 
 import Button from '@material-ui/core/Button';
 import { Link } from "gatsby"
+import "../components/layout.scss"
 
 
 const styles = theme => ({
@@ -56,11 +57,18 @@ class IndexPage extends React.Component {
   render() {
     const { classes } = this.props;
     return(
-      <Layout >
+      <div style={{
+        margin: `0 auto`,
+        maxWidth: `100%`,
+        height: `100%`,
+        padding: `0 1.0875rem 1.45rem`,
+        backgroundColor: `#FFFFFF`,
+      }}>
+        <main>
         <SEO title="Hello" />
         <div className="center">
         <div>
-          <h1>ALEXIS WEI</h1>
+          <h1 style={{fontSize: "3rem"}}>ALEXIS WEI</h1>
           <h6 className="light">Robotics Engineer and Designer</h6>
         </div>
         <div>
@@ -72,11 +80,12 @@ class IndexPage extends React.Component {
           <Link to="/design/" className={classes.yellowButton } style={{textDecoration: 'none'}}>Design</Link></Button>
         </div>
         </div>
+        </main>
 
 
       
         {/* <Link to="/page-2/">Go to page 2</Link> */}
-      </Layout>
+      </div>
     )
   }
   

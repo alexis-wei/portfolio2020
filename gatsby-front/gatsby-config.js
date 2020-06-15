@@ -1,8 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Alexis Wei`,
+    title: `ALEXIS WEI`,
     description: `This is Alexis Wei's portfolio for work in mechanical engineering, computer science, and design`,
     author: `@alexis.w`,
+    "menuLinks": [
+      {
+        "name": "Mechancial",
+        "link": "/mechanical"
+      },
+      {
+        "name": "Software",
+        "link": "/cs"
+      },
+      {
+        "name": "Design",
+        "link": "/design"
+      },
+      {
+        "name": "About me",
+        "link": "/about"
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,8 +39,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
         display: `minimal-ui`,
         icon: `src/images/bunny.svg`, // This path is relative to the root of the site.
       },

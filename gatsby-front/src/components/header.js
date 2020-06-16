@@ -3,12 +3,17 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import NoteOutlinedIcon from '@material-ui/icons/NoteOutlined';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import resume from "../files/Alexis_Wei_Resume.pdf";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,8 +27,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
 }));
-
-
 
 
 function Header({ siteTitle, menuLinks, mainColor}){
@@ -44,6 +47,20 @@ function Header({ siteTitle, menuLinks, mainColor}){
         </Link>
       ))}
       </List>
+      <div style={{display: "flex", justifyContent: "center", alignItems: "center", color: mainColor}}>
+        <IconButton href={resume} target="_blank" > 
+            <NoteOutlinedIcon/>
+        </IconButton>
+        <IconButton href="https://www.linkedin.com/in/alexis-wei"  target="_blank"> 
+            <LinkedInIcon/>
+        </IconButton>
+        <IconButton href="https://github.com/alexis-wei"  target="_blank"> 
+            <GitHubIcon/>
+        </IconButton>
+        <IconButton href="https://www.instagram.com/awei.studio/" target="_blank" > 
+            <InstagramIcon/>
+        </IconButton>
+      </div>
     </div>
   );
 

@@ -7,7 +7,7 @@ import Description from "../components/description"
 
 
 const myTitle = "COMPUTER SCIENCE"
-const myCaption = "Computer Science has allowed me to understand the world of technology around me through the power of languages. Constantly making me ask questions about why."
+const myCaption = "Computer Science has allowed me to understand the world of technology through the power of languages. Constantly making me ask questions about why."
 
 
 class Cs extends React.Component {

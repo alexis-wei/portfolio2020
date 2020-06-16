@@ -1,9 +1,60 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
 
-const Header = ({ siteTitle, menuLinks, mainColor }) => (
-  <header style={{ background: "white", marginBottom: "1rem",}}>
+
+const useStyles = makeStyles((theme) => ({
+  links: {
+    color: "#000000",
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
+  drawerPaper: {
+    width: '100%',
+  },
+}));
+
+
+
+
+function Header({ siteTitle, menuLinks, mainColor}){
+  const classes = useStyles();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const drawer = (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+      <List style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
+      {menuLinks.map(link => (
+        
+        <Link style={{ color: mainColor, textDecoration: "none", width: "100%"}}  to={link.link}>
+          <ListItem button key={link.name} style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <p className="header-title" style={{margin: "20px"}}>{link.name}</p>
+          </ListItem>
+        </Link>
+      ))}
+      </List>
+    </div>
+  );
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  
+
+  return(
+    <header style={{ background: "white", marginBottom: "1rem",}}>
     <div style={{ background: "white",marginBottom: "1rem",}}>
       <div
         style={{
@@ -25,12 +76,14 @@ const Header = ({ siteTitle, menuLinks, mainColor }) => (
             {siteTitle}
           </Link>
         </h2>
-        <div style={{display: "flex", alignItems: "center"}}>
-          <nav style={{height: "100%", margin: 0}} >
+        
+        <div  style={{display: "flex", alignItems: "center"}}>
+          <nav  style={{height: "100%", margin: 0}} >
+          <Hidden smDown>
             <ul style={{ display: "flex", flex: 1, justifyItems: "space-between",
           alignItems: "center", height: "100%", width: "100%", margin: 0 }}>
               {menuLinks.map(link => (
-                <li key={link.name}
+                <li  key={link.name}
                   style={{
                     listStyleType: `none`,
                     padding: `1rem`,
@@ -43,12 +96,41 @@ const Header = ({ siteTitle, menuLinks, mainColor }) => (
                 </li>
               ))}
             </ul>
+          </Hidden>
+          <Hidden mdUp>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+            variant="temporary"
+            anchor={'right'}
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            {drawer}
+          </Drawer>
+          </Hidden>
           </nav>
         </div>
       </div>
     </div>
   </header>
-)
+  )
+}
+ 
+
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

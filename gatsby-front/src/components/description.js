@@ -4,14 +4,14 @@ import Grid from '@material-ui/core/Grid';
 
 const Description = ({ title, caption, clouds}) => (
     <Grid container spacing={3} direction="row" justify="center" alignItems="center" >
-        <Grid item sm={6}>
+        <Grid item xs={12} sm={6} style={{minWidth: "280px"}}>
         <h1>{title}</h1>
         <h6 style={{width: "80%"}}>{caption}
         </h6>
 
         </Grid>
-        <Grid item sm={6}>
-            <img src={clouds}/>
+        <Grid item xs={12} sm={6}>
+            <img src={clouds} alt="clouds"/>
         </Grid>
     </Grid>
 

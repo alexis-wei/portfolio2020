@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { withStyles } from '@material-ui/styles';
 
@@ -22,6 +21,8 @@ const styles = theme => ({
   },
   pinkButton: {
     color: '#707070',
+    fontWeight: "400",
+    paddingBottom: "0.3rem",
     '&:hover': {
       borderColor: '#A26C6C',
       color: '#A26C6C',
@@ -30,6 +31,8 @@ const styles = theme => ({
   },
   blueButton: {
     color: '#707070',
+    fontWeight: "400",
+    paddingBottom: "0.3rem",
     '&:hover': {
       borderColor: '#547398',
       color: '#547398',
@@ -38,6 +41,8 @@ const styles = theme => ({
   },
   yellowButton: {
     color: '#707070',
+    fontWeight: "400",
+    paddingBottom: "0.3rem",
     '&:hover': {
       borderColor: '#D1A922',
       color: '#D1A922',
@@ -69,15 +74,15 @@ class IndexPage extends React.Component {
         <div className="center">
         <div>
           <h1 style={{fontSize: "3rem"}}>ALEXIS WEI</h1>
-          <h6 className="light">Robotics Engineer and Designer</h6>
+          <h6 className="light" style={{fontSize: "1.5rem"}}>Robotics Engineer and Designer</h6>
         </div>
         <div>
           <Button className={classes.pinkButton } variant="outlined" classes={{root: classes.root, label: classes.label }} color="primary" size="small" > 
-            <Link to="/mechanical/" className={classes.pinkButton } style={{textDecoration: 'none'}}>Mechanical</Link></Button>
+            <Link to="/mechanical/" className={classes.pinkButton } style={{textDecoration: 'none', margin:"0", padding: "0"}}>Mechanical</Link></Button>
           <Button className={classes.blueButton } classes={{root: classes.root, label: classes.label }} variant="outlined" color="primary" size="small" >
-          <Link to="/cs/" className={classes.blueButton } style={{textDecoration: 'none'}}>Software</Link></Button>
+          <Link to="/cs/" className={classes.blueButton } style={{textDecoration: 'none', margin:"0", padding: "0"}}>Software</Link></Button>
           <Button className={classes.yellowButton }classes={{root: classes.root, label: classes.label }} variant="outlined" color="primary" size="small" >
-          <Link to="/design/" className={classes.yellowButton } style={{textDecoration: 'none'}}>Design</Link></Button>
+          <Link to="/design/" className={classes.yellowButton } style={{textDecoration: 'none', margin:"0", padding: "0"}}>Design</Link></Button>
         </div>
         </div>
         </main>

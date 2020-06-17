@@ -67,6 +67,19 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: $body-text;
+  font-weight: 600;
+  color: inherit;
 }
 a:active,
 a:hover {
@@ -269,12 +282,12 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0.5rem;
   color: inherit;
   font-family: $title;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.4rem;
   line-height: 1.1;
 }
 h3 {
@@ -288,9 +301,9 @@ h3 {
   margin-bottom: 1.45rem;
   color: inherit;
   font-family: $title;
-  font-weight: bold;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1rem;
   line-height: 1.1;
 }
 h4 {
@@ -312,17 +325,17 @@ h4 {
 h5 {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-top: 1.5rem;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0.75rem;
   color: inherit;
   font-family: $title;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 0.9rem;
   line-height: 1.1;
 }
 h6 {
@@ -403,8 +416,9 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   font-family: $body-text;
+  font-weight: 400;
 }
 figure {
   margin-left: 0;
@@ -715,4 +729,10 @@ pre tt:after {
 .header-title {
   font-weight: 400;
   font-size: 22px;
+}
+
+.footer-links{
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 1rem;
 }

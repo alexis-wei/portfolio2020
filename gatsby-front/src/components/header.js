@@ -48,16 +48,16 @@ function Header({ siteTitle, menuLinks, mainColor}){
       ))}
       </List>
       <div style={{display: "flex", justifyContent: "center", alignItems: "center", color: mainColor}}>
-        <IconButton href={resume} target="_blank" > 
+        <IconButton href={resume} rel="noopener noreferrer" target="_blank" > 
             <NoteOutlinedIcon/>
         </IconButton>
-        <IconButton href="https://www.linkedin.com/in/alexis-wei"  target="_blank"> 
+        <IconButton href="https://www.linkedin.com/in/alexis-wei"  rel="noopener noreferrer" target="_blank"> 
             <LinkedInIcon/>
         </IconButton>
-        <IconButton href="https://github.com/alexis-wei"  target="_blank"> 
+        <IconButton href="https://github.com/alexis-wei"  rel="noopener noreferrer" target="_blank"> 
             <GitHubIcon/>
         </IconButton>
-        <IconButton href="https://www.instagram.com/awei.studio/" target="_blank" > 
+        <IconButton href="https://www.instagram.com/awei.studio/" rel="noopener noreferrer" target="_blank" > 
             <InstagramIcon/>
         </IconButton>
       </div>
@@ -88,6 +88,10 @@ function Header({ siteTitle, menuLinks, mainColor}){
             style={{
               color: mainColor,
               textDecoration: "none",
+              margin:"0",
+              padding: "0",
+              fontSize: "2rem",
+              fontFamily: "interstate, sans-serif"
             }}
           >
             {siteTitle}
@@ -104,7 +108,7 @@ function Header({ siteTitle, menuLinks, mainColor}){
                   style={{
                     listStyleType: `none`,
                     padding: `1rem`,
-                    margin: 0 
+                    
                   }}
                 >
                   <Link style={{ color: mainColor, textDecoration: "none" }} to={link.link}>

@@ -9,10 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
+import Portfolio from "../files/Portfolio-2019.pdf"
 
 import "./layout.scss"
 
-const Layout = ({ children, headerColor }) => {
+const Layout = ({ children, headerColor, resume }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -42,11 +43,22 @@ const Layout = ({ children, headerColor }) => {
           backgroundColor: `#FFFFFF`,
         }}
       >
-        <main>{children}</main>
-        <footer style={{paddingBottom: "200px"}}>
-
-        </footer>
+        <main>{children}
+        <div style={{paddingBottom: "60px", backgroundColor: "#FFFFFF", position: "relative", width: "100%"}}>
+          <div className="center" style={{paddingTop: "100px", color: headerColor}}>
+            <a className="footer-links"  href={Portfolio}  rel="noopener noreferrer" target="_blank">Portfolio</a>
+            <a className="footer-links"  href={resume}  rel="noopener noreferrer" target="_blank">Resume</a>
+            <a className="footer-links"  href="https://www.linkedin.com/in/alexis-wei"  rel="noopener noreferrer" target="_blank">LinkedIn</a>
+            <a className="footer-links"  href="https://github.com/alexis-wei"  rel="noopener noreferrer" target="_blank">GitHub</a>
+            <a className="footer-links"  href="https://www.instagram.com/awei.studio/" rel="noopener noreferrer" target="_blank"> Instagram</a>
+          </div>
+        </div>
+        </main>
+        
+      <footer>
+      </footer>
       </div>
+      
     </>
   )
 }

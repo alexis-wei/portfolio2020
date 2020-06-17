@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Cloud from "../images/yellow-clouds.svg"
 import Description from "../components/description"
-
+import Resume from "../files/Alexis_Wei_DesignResume.pdf";
 
 
 const myTitle = "ART + DESIGN"
@@ -19,7 +19,7 @@ class Design extends React.Component {
   
     render() {
       return(
-        <Layout headerColor={'#D1A922'}>
+        <Layout headerColor={'#D1A922'} resume={Resume}>
             <SEO title="Design"/>
             <div style={{color: '#D1A922'}}>
                 <Description title={myTitle} caption={myCaption} clouds={Cloud}/>

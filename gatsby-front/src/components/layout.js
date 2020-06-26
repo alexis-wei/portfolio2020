@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Portfolio from "../files/Portfolio-2019.pdf"
+import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
 
 import "./layout.scss"
 
@@ -51,6 +52,10 @@ const Layout = ({ children, headerColor, resume }) => {
             <a className="footer-links"  href="https://www.linkedin.com/in/alexis-wei"  rel="noopener noreferrer" target="_blank">LinkedIn</a>
             <a className="footer-links"  href="https://github.com/alexis-wei"  rel="noopener noreferrer" target="_blank">GitHub</a>
             <a className="footer-links"  href="https://www.instagram.com/awei.studio/" rel="noopener noreferrer" target="_blank"> Instagram</a>
+          </div>
+          <div style={{display: "flex", direction: "row"}}>
+          <p  style={{marginRight: "10px"}}>Built by Alexis Wei</p>
+          <WbSunnyOutlinedIcon/>
           </div>
         </div>
         </main>

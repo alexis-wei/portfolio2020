@@ -73,10 +73,9 @@ function Header({ siteTitle, menuLinks, mainColor}){
   return(
     <header style={{ background: "white", marginBottom: "1rem",}}>
     <div style={{ background: "white",marginBottom: "1rem",}}>
-      <div
+      <div className='page-spacing'
         style={{
           margin: "0 auto",
-          maxWidth: "80%",
           padding: "1rem 1rem",
           display: "flex",
           justifyItems: "space-between",
@@ -90,8 +89,9 @@ function Header({ siteTitle, menuLinks, mainColor}){
               textDecoration: "none",
               margin:"0",
               padding: "0",
-              fontSize: "2rem",
-              fontFamily: "interstate, sans-serif"
+              fontSize: "2.2rem",
+              letterSpacing: "0.2rem",
+              fontFamily: "poppins, sans-serif"
             }}
           >
             {siteTitle}

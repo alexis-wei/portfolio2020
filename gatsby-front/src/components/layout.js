@@ -9,12 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import Portfolio from "../files/Portfolio-2019.pdf"
 import WbSunnyOutlinedIcon from '@material-ui/icons/WbSunnyOutlined';
 
-import "./layout.scss"
+import "./css/layout.scss"
 
-const Layout = ({ children, headerColor, resume }) => {
+const Layout = ({ children, headerColor, resume, portfolio }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -35,23 +34,22 @@ const Layout = ({ children, headerColor, resume }) => {
       // <Header siteTitle={data.site.siteMetadata.title} /> 
     <>
       <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} mainColor={headerColor} />
-      <div
+      <div className="page-spacing"
         style={{
           margin: `0 auto`,
-          maxWidth: `70%`,
           height: `100%`,
           padding: `0 1.0875rem 1.45rem`,
           backgroundColor: `#FFFFFF`,
         }}
       >
         <main>{children}
-        <div style={{paddingBottom: "60px", backgroundColor: "#FFFFFF", position: "relative", width: "100%"}}>
+        <div style={{paddingBottom: "60px", marginTop: "80px", backgroundColor: "#FFFFFF", position: "relative", width: "100%"}}>
           <div className="center" style={{paddingTop: "100px", color: headerColor}}>
-            <a className="footer-links"  href={Portfolio}  rel="noopener noreferrer" target="_blank">Portfolio</a>
-            <a className="footer-links"  href={resume}  rel="noopener noreferrer" target="_blank">Resume</a>
-            <a className="footer-links"  href="https://www.linkedin.com/in/alexis-wei"  rel="noopener noreferrer" target="_blank">LinkedIn</a>
-            <a className="footer-links"  href="https://github.com/alexis-wei"  rel="noopener noreferrer" target="_blank">GitHub</a>
-            <a className="footer-links"  href="https://www.instagram.com/awei.studio/" rel="noopener noreferrer" target="_blank"> Instagram</a>
+            <a className="footer-links"  href={portfolio}  rel="noopener noreferrer" target="_blank">PORTFOLIO</a>
+            <a className="footer-links"  href={resume}  rel="noopener noreferrer" target="_blank">RESUME</a>
+            <a className="footer-links"  href="https://www.linkedin.com/in/alexis-wei"  rel="noopener noreferrer" target="_blank">LINKEDIN</a>
+            <a className="footer-links"  href="https://github.com/alexis-wei"  rel="noopener noreferrer" target="_blank">GITHUB</a>
+            <a className="footer-links"  href="https://www.instagram.com/awei.studio/" rel="noopener noreferrer" target="_blank"> INSTAGRAM</a>
           </div>
           <div style={{display: "flex", direction: "row"}}>
           <p  style={{marginRight: "10px"}}>Built by Alexis Wei</p>

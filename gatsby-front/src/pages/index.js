@@ -4,17 +4,18 @@ import { withStyles } from '@material-ui/styles';
 
 import Button from '@material-ui/core/Button';
 import { Link } from "gatsby"
-import "../components/layout.scss"
+import "../components/css/layout.scss"
 
 
 const styles = theme => ({
   root: {
     borderRadius: 10,
-    margin: 10, 
-    width: 120,
+    margin: 10,
+    paddingLeft: '10px', 
+    paddingRight: '10px',
+    width: 160,
     borderColor: '#707070',
-    
-    fontSize: '0.8rem'
+    fontSize: '0.75rem'
   },
   label: {
     textTransform: 'capitalize',

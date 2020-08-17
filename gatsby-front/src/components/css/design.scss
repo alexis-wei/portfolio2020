@@ -1,0 +1,9 @@
+.pomp-orange {
+    width: 600px;
+    z-index: 1;
+    @media screen and (max-width: 600px) {
+        position: absolute;
+        margin-left: 0px;
+    }
+    
+}

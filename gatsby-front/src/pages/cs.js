@@ -8,7 +8,7 @@ import Portfolio from "../files/Portfolio-2019.pdf";
 
 
 const myTitle = "COMPUTER SCIENCE"
-const myCaption = "There's got to be something that tells robots what to do right?"
+const myCaption = "Software is fast paced and there is always something to learn. I'm constantly amazed by how much is possible with just a couple lines of code"
 
 class Cs extends React.Component {
     constructor() {

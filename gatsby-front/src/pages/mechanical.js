@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 import Grid from '@material-ui/core/Grid';
 import Cloud from "../images/pink-clouds.svg"
 import FormulaRenders from "../images/Formula-renders.svg"

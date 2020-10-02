@@ -1,8 +1,9 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Cloud from "../images/blue-clouds.svg"
-import Description from "../components/description"
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Grid from '@material-ui/core/Grid';
+import Cloud from "../images/blue-clouds.svg";
+import Description from "../components/description";
 import Resume from "../files/Alexis_Wei_CSResume.pdf";
 import Portfolio from "../files/Portfolio-2019.pdf";
 
@@ -23,7 +24,37 @@ class Cs extends React.Component {
             <SEO title="CS"/>
             <div style={{color: '#547398'}}>
                 <Description title={myTitle} caption={myCaption} clouds={Cloud}/>
+                <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: "1.2rem"}}>
+                  <Grid item xs={12} md={6} lg={7} style={{backgroundColor: "#E3F4FF", padding:"3.5rem", borderRadius:"16px"}}>
+                    <h2>DINE HERE</h2>
+                    <h3>CO-FOUNDER</h3>
+                    <p>Over the last couple of months, I have been working on DineHere, a platform that currently helps to bring contactless menus to local restaurants!</p>
+                    <p>We hope for DineHere to eventually be a platform where YOU can find the best food to around you at any time.</p>
+                    <p>At DineHere, I also code a little and have been working on the entire stack of the site. From MongoDB, to KOA, to the frontend in React.js and Redux. This has been an absolutely amazing experience and am excited to keep going!</p>
+                    <a href="https://dinehere.me"  rel="noopener noreferrer"  target="_blank">Live Right NOW :)</a>
+                  </Grid>
+                </Grid>
+                <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: "1.2rem"}}>
+                  <Grid item xs={12} md={6} lg={7} style={{backgroundColor: "#F4F4F4", padding:"3.5rem", borderRadius:"16px"}}>
+                    <h2>POMP BEAUTY</h2>
+                    <h3>FRONTEND DEVELPER</h3>
+                    <p>Over the summer, not only did I get to work on the UI/UX design of Pomp, I also got to work with the engineering team
+                      to implement my design using React.js
+                    </p>
+                    <a href="https://www.pompbeauty.com/survey"  rel="noopener noreferrer"  target="_blank">Check it out!</a>
+                  </Grid>
+                </Grid>
+                <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: "1.2rem"}}>
+                  <Grid item xs={12} md={6} lg={7} style={{backgroundColor: "#E3F4FF", padding:"3.5rem", borderRadius:"16px"}}>
+                    <h2>FORMULA ELECTRIC @ BERKELEY</h2>
+                    <h3>FIRMWARE DEVELPER</h3>
+                    <p>Recently, I've switched from the Chassis team to the EECS team in order to help making this amazing vehicle move</p>
+                    <p>Now I am working with STM32CubeIDE and C++!</p>
+                      
+                  </Grid>
+                </Grid>
             </div>
+
         </Layout>
     )}
 }
